@@ -17,6 +17,7 @@ SET BIN=..\..\bin
 %BIN%\asm DTOI.ASM /p
 %BIN%\asm EXIT.ASM /p
 %BIN%\asm FCLOSE.ASM /p
+%BIN%\asm FFLUSH.ASM /p
 %BIN%\asm FEOF.ASM /p
 %BIN%\asm FERROR.ASM /p
 %BIN%\asm FGETC.ASM /p

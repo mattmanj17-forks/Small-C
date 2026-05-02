@@ -2266,7 +2266,12 @@ int skim(char *opstr, int tcode, int dropval, int endval, int (*level)(), int *i
             gen(LABm, droplab);
             gen(GETw1n, dropval);
             gen(LABm, endlab);
+            /* Clear all type-tracking fields so callers (e.g. genTestAndJmp via
+               isLongVal) do not mis-classify the 0/1 int result as a long value
+               because SYMTAB_ADR still points to the last long sub-expression's
+               symbol.  The && / || result is always a 16-bit int (0 or 1). */
             is[TYP_OBJ] = is[TYP_ADR] = is[TYP_CNST] = is[VAL_CNST] = is[STG_ADR] = 0;
+            is[SYMTAB_ADR] = 0;
             return 0;
         }
         else

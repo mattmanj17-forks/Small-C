@@ -33,6 +33,7 @@ extern int ctellc(int fd);
 extern int dtoi(char *decstr, int *nbr);
 extern void exit(int ec);
 extern int fclose(int fd);
+extern int fflush(int fd);
 extern int feof(int fd);
 extern int ferror(int fd);
 extern int fgetc(int fd);

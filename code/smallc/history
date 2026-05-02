@@ -511,3 +511,5 @@ Small-C Revision History
     primary().
     cc4: Rules 136-141: GETw1s+PUSH1->PUSHs (rule 136) and PUSHm+<load>+POP2
     ->GETw2m+<load> for five RHS load forms (rules 137-141).
+170 Fix mistyped result of &&'ing or (ha!) ||'ing two long integers. The
+    result is a boolean 0/1 int, not a long int.
